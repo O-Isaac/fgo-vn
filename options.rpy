@@ -199,6 +199,15 @@ init python:
     build.documentation('*.html')
     build.documentation('*.txt')
 
+    ## Customs Tags 
+    def line3(tag, argument):
+        return [(renpy.TEXT_TEXT, "—")]
+    config.self_closing_custom_text_tags["line 3"] = line3
+    
+    def line2(tag, argument):
+        return [(renpy.TEXT_TEXT, "—")]
+    config.self_closing_custom_text_tags["line 2"] = line2
+
 
 ## Es necesaria una clave de licencia Google Play para descargar archivos de
 ## expansión y realizar compras en la aplicación. Se puede encontrar en la
